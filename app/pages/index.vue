@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gray-50">
+  <div class="min-h-screen flex items-center justify-center bg-gray-50 bg-[url('/images/pattern-ume.svg')] bg-repeat">
     <div class="text-center space-y-5">
       <img
         src="/images/horse-2026.png"
