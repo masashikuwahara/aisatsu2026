@@ -4,7 +4,8 @@
       <img
         src="/images/horse-2026.jpg"
         alt="午年のイラスト"
-        class="fade-up mx-auto w-32 md:w-40 opacity-90"
+        class="fade-up mx-auto w-full max-w-sm
+              md:max-w-xs opacity-90"
       />
 
       <p class="fade-up text-gray-400">
