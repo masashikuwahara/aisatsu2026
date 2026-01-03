@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <!--
+    Seamless Ume (plum blossom) pattern tile
+    - 背景に敷く用途を想定（薄い色・主張控えめ）
+    - fill の色と opacity は好みで調整OK
+  -->
+  <defs>
+    <g id="ume">
+      <!-- 花びら（5枚） -->
+      <g>
+        <path d="M0,-22 C10,-22 16,-14 16,-6 C16,4 8,12 0,12 C-8,12 -16,4 -16,-6 C-16,-14 -10,-22 0,-22Z" fill="currentColor"></path>
+        <use href="#petal"></use>
+      </g>
+    </g>
+
+    <!-- 花びらを回転で作るための定義 -->
+    <path id="petal" d="M0,-22 C10,-22 16,-14 16,-6 C16,4 8,12 0,12 C-8,12 -16,4 -16,-6 C-16,-14 -10,-22 0,-22Z"></path>
+
+    <!-- 花（中心＋花びら5） -->
+    <g id="flower">
+      <use href="#petal" fill="currentColor" transform="rotate(0)"></use>
+      <use href="#petal" fill="currentColor" transform="rotate(72)"></use>
+      <use href="#petal" fill="currentColor" transform="rotate(144)"></use>
+      <use href="#petal" fill="currentColor" transform="rotate(216)"></use>
+      <use href="#petal" fill="currentColor" transform="rotate(288)"></use>
+
+      <!-- 中心 -->
+      <circle cx="0" cy="0" r="5.5" fill="currentColor" opacity="0.9"></circle>
+      <circle cx="0" cy="0" r="2.2" fill="#fff" opacity="0.7"></circle>
+
+      <!-- おしべ（点） -->
+      <g opacity="0.8">
+        <circle cx="0" cy="-10" r="1.1" fill="#fff"></circle>
+        <circle cx="6" cy="-7" r="1.1" fill="#fff"></circle>
+        <circle cx="10" cy="0" r="1.1" fill="#fff"></circle>
+        <circle cx="6" cy="7" r="1.1" fill="#fff"></circle>
+        <circle cx="0" cy="10" r="1.1" fill="#fff"></circle>
+        <circle cx="-6" cy="7" r="1.1" fill="#fff"></circle>
+        <circle cx="-10" cy="0" r="1.1" fill="#fff"></circle>
+        <circle cx="-6" cy="-7" r="1.1" fill="#fff"></circle>
+      </g>
+    </g>
+
+    <!-- 影（ほんのり） -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-opacity="0.12"></feDropShadow>
+    </filter>
+  </defs>
+
+  <!-- タイル背景：透明（必要ならrectで塗れます） -->
+  <!-- <rect width="240" height="240" fill="#f9fafb"/> -->
+
+  <!-- 梅の配置（大小・回転） -->
+  <!-- 色：淡い紅 -->
+  <g color="#f43f5e" opacity="0.12">
+    <g transform="translate(48 56) rotate(12) scale(1.0)" filter="url(#softShadow)">
+      <use href="#flower"></use>
+    </g>
+
+    <g transform="translate(168 72) rotate(-8) scale(0.85)" filter="url(#softShadow)">
+      <use href="#flower"></use>
+    </g>
+
+    <g transform="translate(92 150) rotate(20) scale(0.7)" filter="url(#softShadow)">
+      <use href="#flower"></use>
+    </g>
+
+    <g transform="translate(188 178) rotate(6) scale(0.6)" filter="url(#softShadow)">
+      <use href="#flower"></use>
+    </g>
+
+    <g transform="translate(34 190) rotate(-14) scale(0.55)" filter="url(#softShadow)">
+      <use href="#flower"></use>
+    </g>
+
+    <!-- 小花（さらに薄く） -->
+    <g opacity="0.75">
+      <g transform="translate(120 24) rotate(10) scale(0.45)">
+        <use href="#flower"></use>
+      </g>
+      <g transform="translate(222 118) rotate(-18) scale(0.4)">
+        <use href="#flower"></use>
+      </g>
+      <g transform="translate(14 120) rotate(22) scale(0.4)">
+        <use href="#flower"></use>
+      </g>
+    </g>
+  </g>
+</svg>
