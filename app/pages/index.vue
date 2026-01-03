@@ -26,4 +26,8 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  useHead({
+    title: '2026年 新年のご挨拶',
+  })
+</script>
